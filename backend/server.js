@@ -167,8 +167,8 @@ app.use((req, res, next) => {
 // Global Error Handler
 app.use(errorHandler);
 
-// Start server
-app.listen(PORT, () => {
+// Start server - listen on '::' for Railway private networking (IPv4/IPv6)
+app.listen(PORT, '::', () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`Client URL: ${process.env.CLIENT_URL || 'http://localhost:5173'}`);
