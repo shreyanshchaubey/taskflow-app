@@ -16,7 +16,7 @@ const db = require('./config/database');
 
 // Initialize Express app
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.SERVER_PORT || 5000;
 
 // Run database migrations on startup
 const runMigrations = async () => {
